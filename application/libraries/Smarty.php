@@ -33,7 +33,8 @@ class CI_Smarty extends Smarty {
         $this->debugging = config_item('smarty_debug');
 
         // Set some pretty standard Smarty directories
-        $this->setCompileDir(config_item('compile_directory'));
+        //$this->setCompileDir(config_item('compile_directory'));
+        $this->setCompileDir(config_item('compile_directory').config_item('language'));
         $this->setCacheDir(config_item('cache_directory'));
         $this->setConfigDir(config_item('config_directory'));
 
