@@ -22,12 +22,12 @@ $config['supported_languages'] = array(
 	'direction' => 'ltr',
 	'codes' => array('en', 'english', 'en_US'),
     ),
-    'ru' => array(
-	'name' => 'Русский',
-	'folder' => 'russian',
-	'direction' => 'ltr',
-	'codes' => array('rus', 'russian', 'ru_RU'),
-    )
+    'de' => array(
+        'name' => 'Deutsch',
+        'folder' => 'german',
+        'direction' => 'ltr',
+        'codes' => array('de', 'german', 'de_DE'),
+    ),
 );
 
 /*
