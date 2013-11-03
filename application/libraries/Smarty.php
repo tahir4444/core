@@ -34,7 +34,7 @@ class CI_Smarty extends Smarty {
 
         // Set some pretty standard Smarty directories
         //$this->setCompileDir(config_item('compile_directory'));
-        $this->setCompileDir(config_item('compile_directory').config_item('language'));
+        $this->setCompileDir(config_item('compile_directory').config_item('language')); // adapted by Markus Lippert - allows multilanguage-caching
         $this->setCacheDir(config_item('cache_directory'));
         $this->setConfigDir(config_item('config_directory'));
 
