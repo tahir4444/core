@@ -1,5 +1,34 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+
+/**
+ * Inserted (copied and modified) by Markus Lippert - lang function without the $id parameter for faster access
+ */
+
+function l($line)
+{
+	$CI =& get_instance();
+	$line = $CI->lang->line($line);
+	
+	$args = func_get_args();
+	
+	if(is_array($args))
+	{
+		array_shift($args); // remove first argument (the line)
+	}
+	
+	if(is_array($args) && count($args))
+	{
+		foreach($args as $arg)
+		{
+			$line = preg_replace('/\{(.*)\}/', '%s', $line); // allowes to use variables like: {foo}
+			$line = str_replace_first('%s', $arg, $line);
+		}
+	}
+	
+	return $line;
+} 
+
 function lang($line, $id = '')
 {
 	$CI =& get_instance();
@@ -26,6 +55,7 @@ function lang($line, $id = '')
 	{
 		foreach($args as $arg)
 		{
+			$line = preg_replace('/\{(.*)\}/', '%s', $line); // added by Markus Lippert - allowes to use variables like: {foo}
 			$line = str_replace_first('%s', $arg, $line);
 		}
 	}
