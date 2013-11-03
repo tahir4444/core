@@ -208,14 +208,16 @@ class MY_Parser extends CI_Parser {
     public function css($file, $attributes = array())
     {
         $defaults = array(
-            'media' => 'screen',
+            //'media' => 'screen', Commented out by Markus Lippert - no need for default media type (can be defined via css)
             'rel'   => 'stylesheet',
             'type'  => 'text/css'
         );
 
         $attributes = array_merge($defaults, $attributes);
 
-        $return = '<link rel="'.$attributes['rel'].'" type="'.$attributes['type'].'" href="'.base_url(config_item('theme_path').$this->get_theme()."/css/".$file).'" media="'.$attributes['media'].'">';
+        //$return = '<link rel="'.$attributes['rel'].'" type="'.$attributes['type'].'" href="'.base_url(config_item('theme_path').$this->get_theme()."/css/".$file).'" media="'.$attributes['media'].'">';
+        // Adapted by Markus Lippert - no need for default media type (can be defined via css)
+        $return = '<link rel="'.$attributes['rel'].'" type="'.$attributes['type'].'" href="'.base_url(config_item('theme_path').$this->get_theme()."/css/".$file).'">';
 
         return $return;
     }
