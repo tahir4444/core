@@ -9,7 +9,7 @@
 
 	{l('welcome', '"YourName"')} <br />
 	<br />
-	{$test} <br />
+	<em>{$test}</em> <br />
 	<br />
 	{l('elapsed_time')}: {$this->benchmark->elapsed_time()}
 

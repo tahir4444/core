@@ -26,7 +26,7 @@ class Home extends MX_Controller {
 	 */
 	public function index()
 	{
-		$data['test'] = 'somedata'; // passing some sample data
+		$data['test'] = 'somedata from controller'; // passing some sample data
 		
 		$this->parser->parse('home', $data); // Load template
 	}
