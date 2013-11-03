@@ -18,7 +18,7 @@ $config['cache_status']         = TRUE;
 
 // The path to the themes
 // Default is implied root directory/themes/
-$config['theme_path'] = 'themes/';
+$config['theme_path'] = APPPATH . 'themes/';
 
 // The default name of the theme to use (this can be overridden)
 $config['theme_name'] = "default";
