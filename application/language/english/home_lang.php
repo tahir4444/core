@@ -1,7 +1,7 @@
 <?php
 
 $lang['title'] = 'Home';
-$lang['welcome'] = 'Good Day {user}!';
+$lang['welcome'] = 'Welcome {user}!';
 $lang['elapsed_time'] = 'Loading Time';
 
 

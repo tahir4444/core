@@ -1,34 +1,36 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Home extends MX_Controller {
-
+	
+	public function __construct()
+	{
+		parent::__construct();
+		
+		$this->lang->load('home'); // Load language file
+	}
+	
 	/**
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
+	 * 		http://example.com/home
 	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
+	 * 		http://example.com/home/index
 	 *	- or -
 	 * Since this controller is set as the default controller in 
 	 * config/routes.php, it's displayed at http://example.com/
 	 *
 	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
+	 * map to home/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function __construct()
-	{
-		parent::__construct();
-		
-		$this->lang->load('home');
-	}
-	
 	public function index()
 	{
-		$this->parser->parse('home');
+		$data['test'] = 'somedata'; // passing some sample data
+		
+		$this->parser->parse('home', $data); // Load template
 	}
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* End of file home.php */
+/* Location: ./application/modules/home/controllers/home.php */
