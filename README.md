@@ -1,4 +1,4 @@
-markyy - Core
+markyy - Core (Main system)
 ======
 created by Markus Lippert
 ____________
