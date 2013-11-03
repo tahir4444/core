@@ -42,5 +42,16 @@ $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
 
+/**
+ * i18n Library
+ */
+
+// URI like '/en/about' -> use controller 'about'
+$route['^(en|de)/(.+)$'] = "$2";
+
+// '/en', '/de', '/fr' and '/nl' URIs -> use default controller
+$route['^(en|de)$'] = $route['default_controller']; 
+
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
