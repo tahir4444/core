@@ -62,7 +62,7 @@ class CI_Lang {
 	 * @param 	string	alternative path to look for language file
 	 * @return	mixed
 	 */
-	function load($langfile = '', $idiom = '', $return = FALSE, $add_suffix = TRUE, $alt_path = '')
+	function load($langfile = '', $idiom = 'english', $return = FALSE, $add_suffix = TRUE, $alt_path = '') // adapted by Markus Lippert - Set english as default error messages language
 	{
 		$langfile = str_replace('.php', '', $langfile);
 
